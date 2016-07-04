@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-class-property",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "enforces semicolon after clas properties",
   "keywords": [
     "eslint",
@@ -13,19 +13,13 @@
     "test": "mocha --recursive"
   },
   "dependencies": {
+    "eslint": "3.0.0",
     "requireindex": "~1.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^6.0.0-beta",
-    "eslint": "^2.0.0",
-    "mocha": "^2.4.5"
-  },
-  "peerDependencies": {
-    "babel-eslint": "^5.0.0||^6.0.0-beta||^6.0.0",
-    "eslint": "^2.0.0"
-  },
-  "engines": {
-    "node": ">=0.10.0"
+    "babel-eslint": "6.1.0",
+    "eslint-config-marudor": "^2.0.3",
+    "mocha": "2.5.3"
   },
   "license": "MIT"
 }

@@ -1,0 +1,12 @@
+{
+  "extends": "marudor/noReact",
+  "env": {
+    "node": true
+  },
+  "globals": {
+  },
+  "rules": {
+    "generator-star-spacing": 0
+  }
+
+}
