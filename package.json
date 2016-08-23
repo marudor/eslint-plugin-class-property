@@ -21,5 +21,13 @@
     "eslint-config-marudor": "^2.0.3",
     "mocha": "2.5.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marudor/eslint-plugin-class-property.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marudor/eslint-plugin-class-property/issues"
+  },
+  "homepage": "https://github.com/marudor/eslint-plugin-class-property#readme"
 }
