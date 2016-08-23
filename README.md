@@ -1,6 +1,6 @@
 # eslint-plugin-class-property
 
-enforces semicolon after clas properties
+Enforces semicolon after class properties
 
 ## Installation
 
@@ -44,8 +44,3 @@ Then configure the rules you want to use under the rules section.
 ## Supported Rules
 
 * Fill in provided rules here
-
-
-
-
-
