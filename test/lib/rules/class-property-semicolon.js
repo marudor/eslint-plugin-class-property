@@ -4,42 +4,60 @@
 * @copyright 2016 . All rights reserved.
 * See LICENSE file in root directory for full license.
 */
-"use strict";
+'use strict';
 
 //------------------------------------------------------------------------------
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib"),
+const rule = require('../../../lib'),
 
-RuleTester = require("eslint").RuleTester;
+RuleTester = require('eslint').RuleTester;
 
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-var ruleTester = new RuleTester({
+const ruleTester = new RuleTester({
   parser: 'babel-eslint',
 });
-ruleTester.run("class-property/class-property-semicolon", rule, {
+ruleTester.run('class-property/class-property-semicolon', rule, {
 
   valid: [
-    "class foo { bar = '';}",
-    "class foo { bar = ''; batz = 1; foobar() {}}"
+    'class foo { bar = \'\';}',
+    'class foo { bar = \'\'; batz = 1; foobar() {}}',
+    {
+      code: 'class foo { bar = \'\'; batz = 1; foobar() {}}',
+      options: ['always'],
+    },
+    {
+      code: 'class foo { bar = \'\'}',
+      options: ['never'],
+    },
   ],
 
   invalid: [
     {
-      code: "class foo { bar = ''}",
+      code: 'class foo { bar = \'\'}',
       errors: [{
         message: 'Missing semicolon.',
-      }]
+      }],
+      options: ['always'],
     }, {
-      code: "class foo { bar = ''; foobar() {} batz = 1 }",
+      code: 'class foo { bar = \'\'; foobar() {} batz = 1 }',
       errors: [{
         message: 'Missing semicolon.',
-      }]
-    }
-  ]
+      }],
+    },
+    {
+      code: 'class foo { bar = \'\'; batz = 1; foobar() {}}',
+      options: ['never'],
+      errors: [{
+        message: 'Extranous semicolon.',
+      }, {
+        message: 'Extranous semicolon.',
+      }],
+    },
+  ],
 });

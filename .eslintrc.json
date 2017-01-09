@@ -6,7 +6,8 @@
   "globals": {
   },
   "rules": {
-    "generator-star-spacing": 0
+    "generator-star-spacing": 0,
+    "header/header": 0
   }
 
 }
