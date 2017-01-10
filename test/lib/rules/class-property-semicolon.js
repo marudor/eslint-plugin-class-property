@@ -10,7 +10,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require('../../../lib'),
+const rule = require('../../../lib/rules/class-property-semicolon'),
 
 RuleTester = require('eslint').RuleTester;
 
