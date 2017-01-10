@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-class-property",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Enforces semicolon after class properties",
   "keywords": [
     "eslint",
