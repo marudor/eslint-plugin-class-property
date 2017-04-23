@@ -1,7 +1,5 @@
 # eslint-plugin-class-property
 
-Enforces semicolon after class properties
-
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
@@ -30,17 +28,58 @@ Add `class-property` to the plugins section of your `.eslintrc` configuration fi
 }
 ```
 
+## Supported Rules
+### class-property/class-property-semicolon
 
-Then configure the rules you want to use under the rules section.
+This rule enforces consistent use of semicolons for class properties.
 
-```json
-{
-    "rules": {
-        "class-property/rule-name": 2
-    }
+## Options
+
+This rule has a single string optio:
+
+* `"always"` (default) requires semicolons at the end of a class property
+* `"never"` disallows semicolons as the end of a class property
+
+### always
+
+Examples of **incorrect** code for this rule with the default `"always"` option:
+
+```js
+/*eslint class-properties/semi: ["error", "always"]*/
+
+class MyClass {
+    classProperty = 'foo'
 }
 ```
 
-## Supported Rules
+Examples of **correct** code for this rule with the default `"always"` option:
 
-* Fill in provided rules here
+```js
+/*eslint class-properties/semi: ["error", "always"]*/
+
+class MyClass {
+    classProperty = 'foo';
+}
+```
+
+### never
+
+Examples of **incorrect** code for this rule with the `"never"` option:
+
+```js
+/*eslint class-properties/semi: ["error", "never"]*/
+
+class MyClass {
+    classProperty = 'foo';
+}
+```
+
+Examples of **correct** code for this rule with the `"never"` option:
+
+```js
+/*eslint class-properties/semi: ["error", "never"]*/
+
+class MyClass {
+    classProperty = 'foo'
+}
+```
