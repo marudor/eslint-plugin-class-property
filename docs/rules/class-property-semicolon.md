@@ -1,36 +1,69 @@
-#   (class-property-semicolon)
+# require or disallow semicolons after class property (lass-property/class-property-semicolon)
 
-Please describe the origin of the rule here.
+This rule enforces consistent use of semicolons for class properties.
 
+## Options
 
-## Rule Details
+This rule has a single string optio:
 
-This rule aims to...
+* `"always"` (default) requires semicolons at the end of a class property
+* `"never"` disallows semicolons as the end of a class property
 
-The following patterns are considered warnings:
+### always
 
-```js
-
-// fill me in
-
-```
-
-The following patterns are not warnings:
+Examples of **incorrect** code for this rule with the default `"always"` option:
 
 ```js
+/*eslint class-properties/semi: ["error", "always"]*/
 
-// fill me in
-
+class MyClass {
+    classProperty = 'foo'
+}
 ```
 
-### Options
+Examples of **correct** code for this rule with the default `"always"` option:
 
-If there are any options, describe them here. Otherwise, delete this section.
+```js
+/*eslint class-properties/semi: ["error", "always"]*/
+
+class MyClass {
+    classProperty = 'foo';
+}
+```
+
+### never
+
+Examples of **incorrect** code for this rule with the `"never"` option:
+
+```js
+/*eslint class-properties/semi: ["error", "never"]*/
+
+class MyClass {
+    classProperty = 'foo';
+}
+```
+
+Examples of **correct** code for this rule with the `"never"` option:
+
+```js
+/*eslint class-properties/semi: ["error", "never"]*/
+
+class MyClass {
+    classProperty = 'foo'
+}
+```
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
+If you do not want to enforce semicolon usage or omission for class properties in any particular way, then you can turn this rule off.
 
 ## Further Reading
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+* [An Open Letter to JavaScript Leaders Regarding Semicolons](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
+* [JavaScript Semicolon Insertion](http://inimino.org/~inimino/blog/javascript_semicolons)
+
+## Related Rules
+
+* [no-extra-semi](no-extra-semi.md)
+* [no-unexpected-multiline](no-unexpected-multiline.md)
+* [semi-spacing](semi-spacing.md)
