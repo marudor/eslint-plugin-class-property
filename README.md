@@ -45,7 +45,7 @@ This rule has a single string optio:
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
 ```js
-/*eslint class-properties/semi: ["error", "always"]*/
+/*eslint class-property/class-property-semicolon: ["error", "always"]*/
 
 class MyClass {
     classProperty = 'foo'
@@ -55,7 +55,7 @@ class MyClass {
 Examples of **correct** code for this rule with the default `"always"` option:
 
 ```js
-/*eslint class-properties/semi: ["error", "always"]*/
+/*eslint class-property/class-property-semicolon: ["error", "always"]*/
 
 class MyClass {
     classProperty = 'foo';
@@ -67,7 +67,7 @@ class MyClass {
 Examples of **incorrect** code for this rule with the `"never"` option:
 
 ```js
-/*eslint class-properties/semi: ["error", "never"]*/
+/*eslint class-property/class-property-semicolon: ["error", "never"]*/
 
 class MyClass {
     classProperty = 'foo';
@@ -77,7 +77,7 @@ class MyClass {
 Examples of **correct** code for this rule with the `"never"` option:
 
 ```js
-/*eslint class-properties/semi: ["error", "never"]*/
+/*eslint class-property/class-property-semicolon: ["error", "never"]*/
 
 class MyClass {
     classProperty = 'foo'
