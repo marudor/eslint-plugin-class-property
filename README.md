@@ -1,5 +1,9 @@
 # eslint-plugin-class-property
 
+## DEPRECATED
+
+Please use [babel-plugin-eslint](https://github.com/babel/eslint-plugin-babel) with the babel/semi rule!
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
